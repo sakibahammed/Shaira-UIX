@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>About Shaira| UI/UX Designer</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&amp;family=Outfit:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#E8AAB8",
+                        "sage": "#B7C9B0",
+                        "sage-light": "#E8F0E6",
+                        "soft-pink": "#FFF0F3",
+                        "deep-text": "#2D2A32",
+                        "glass-white": "rgba(255, 255, 255, 0.4)",
+                    },
+                    fontFamily: {
+                        "serif": ["Cormorant Garamond", "serif"],
+                        "sans": ["Outfit", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "4xl": "2rem",
+                        "5xl": "3rem",
+                    },
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply font-sans bg-[#FDFCFB] text-deep-text antialiased;
+            }
+            h1, h2, h3 {
+                @apply font-serif leading-tight;
+            }
+        }
+        .glass-card {
+            @apply bg-glass-white backdrop-blur-xl border border-white/40 shadow-[0_8px_32px_0_rgba(232,170,184,0.15)];
+        }
+        .organic-shape {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at 20% 30%, #FFF0F3 0%, transparent 50%),
+                        radial-gradient(circle at 80% 70%, #E8F0E6 0%, transparent 50%),
+                        radial-gradient(circle at 50% 50%, #ffffff 0%, #FDFCFB 100%);
+        }
+        .timeline-blob {
+            @apply absolute left-[-9px] top-0 size-4 rounded-full border-4 border-[#FDFCFB];
+        }.interactive-mesh-placeholder {
+            background: linear-gradient(135deg, #E8AAB8 0%, #B7C9B0 50%, #E8F0E6 100%);
+            filter: blur(40px);
+            opacity: 0.4;
+            animation: pulse-shape 8s ease-in-out infinite alternate;
+        }
+        @keyframes pulse-shape {
+            0% { transform: scale(1) rotate(0deg); border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+            100% { transform: scale(1.1) rotate(5deg); border-radius: 40% 60% 70% 30% / 30% 70% 40% 60%; }
+        }
+    </style>
+</head>
+
+<body class="relative overflow-x-hidden selection:bg-primary/30">
+    <div class="fixed inset-0 hero-gradient -z-20 pointer-events-none"></div>
+    <div class="flex flex-col items-center">
+        <div class="w-full max-w-7xl px-6 lg:px-12">
+            <header class="flex items-center justify-between py-10">
+                <a class="flex items-center gap-3 group cursor-pointer" href="index.html">
+                    <div class="relative">
+                        <div
+                            class="size-11 bg-primary/20 rounded-full absolute -top-1 -left-1 group-hover:scale-125 transition-transform duration-500">
+                        </div>
+                        <div class="size-11 glass-card rounded-full flex items-center justify-center relative z-10">
+                            <span class="material-symbols-outlined text-primary text-xl font-light">auto_awesome</span>
+                        </div>
+                    </div>
+                    <h2 class="text-2xl font-bold tracking-tight font-serif italic text-deep-text">Shaira UX</h2>
+                </a>
+                <nav class="hidden md:flex items-center gap-12 glass-card px-8 py-3 rounded-full">
+                    <a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors"
+                        href="index.html#work">Projects</a>
+                    <a class="text-xs font-bold uppercase tracking-widest text-primary" href="#">About</a>
+                    <a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors"
+                        href="#contact">Contact</a>
+                </nav>
+                <button
+                    class="h-12 px-8 bg-deep-text text-white rounded-full text-sm font-semibold hover:bg-primary transition-all shadow-lg hover:shadow-primary/20">
+                    Let's Talk
+                </button>
+            </header>
+            <main class="py-12 md:py-24">
+                <div class="max-w-4xl mb-16 md:mb-24 relative z-10">
+                    <span class="text-primary font-bold text-xs uppercase tracking-[0.3em] mb-6 block">Nice to meet
+                        you</span>
+                    <h1 class="text-6xl md:text-8xl lg:text-9xl text-deep-text">
+                        Designing with <span class="italic font-normal">heart</span> and <span
+                            class="text-sage">logic.</span>
+                    </h1>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                    <div class="lg:col-span-6 relative">
+                        <div class="relative w-full aspect-square flex items-center justify-center">
+                            <div class="absolute inset-0 bg-primary/5 rounded-full blur-3xl scale-125"></div>
+                            <div class="relative w-[110%] h-[110%] flex items-center justify-center cursor-move">
+                                <div class="w-4/5 h-4/5 interactive-mesh-placeholder"></div>
+                                <div
+                                    class="absolute inset-0 border-2 border-dashed border-primary/20 rounded-full animate-[spin_20s_linear_infinite] flex items-center justify-center">
+                                    <div
+                                        class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white px-3 py-1 rounded-full text-[10px] uppercase tracking-tighter text-primary/40 font-bold border border-primary/10">
+                                        3D Interactive Space</div>
+                                </div>
+                                <div
+                                    class="absolute bottom-[10%] right-[5%] glass-card p-6 rounded-3xl max-w-[220px] shadow-2xl z-20 transition-transform hover:scale-105">
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <span class="size-2 bg-primary rounded-full animate-pulse"></span>
+                                        <p class="text-[10px] font-bold text-primary uppercase tracking-widest">Current
+                                            Vibe</p>
+                                    </div>
+                                    <p class="text-base font-medium leading-relaxed italic text-deep-text">"Obsessed
+                                        with micro-interactions and matcha lattes."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-6 space-y-10 relative z-10">
+                        <div class="space-y-6 text-lg md:text-xl text-deep-text/80 font-light leading-relaxed">
+                            <p>
+                                I'm a Junior UI/UX Designer who believes that great design isn't just about how it
+                                looks, but how it makes people <span class="text-primary font-medium italic">feel</span>
+                                and how effortlessly it works.
+                            </p>
+                            <p>
+                                My journey started with a fascination for human behavior and a love for fine arts.
+                                Today, I translate that curiosity into digital experiences that are intuitive,
+                                inclusive, and aesthetically pleasing.
+                            </p>
+                            <p>
+                                When I'm not pushing pixels, you'll find me exploring local stationery shops, tending to
+                                my growing indoor jungle, or sketching people at the park.
+                            </p>
+                        </div>
+                        <div class="pt-8 space-y-6">
+                            <h3 class="text-3xl text-deep-text">My Toolkit</h3>
+                            <div class="flex flex-wrap gap-3">
+                                <span
+                                    class="px-5 py-2 rounded-full bg-soft-pink text-primary text-sm font-semibold border border-primary/10">Figma</span>
+                                <span
+                                    class="px-5 py-2 rounded-full bg-sage-light text-sage text-sm font-semibold border border-sage/10">Adobe
+                                    CC</span>
+                                <span
+                                    class="px-5 py-2 rounded-full bg-slate-100 text-slate-500 text-sm font-semibold">Framer</span>
+                                <span
+                                    class="px-5 py-2 rounded-full bg-soft-pink text-primary text-sm font-semibold border border-primary/10">Prototyping</span>
+                                <span
+                                    class="px-5 py-2 rounded-full bg-sage-light text-sage text-sm font-semibold border border-sage/10">User
+                                    Research</span>
+                                <span
+                                    class="px-5 py-2 rounded-full bg-white text-deep-text/60 text-sm font-semibold border border-black/5">Webflow</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <section class="py-24 border-t border-primary/10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                    <div class="lg:col-span-4">
+                        <h2 class="text-5xl text-deep-text">The <span class="italic text-primary">Journey</span> so far.
+                        </h2>
+                        <p class="mt-4 text-deep-text/60 max-w-xs">A timeline of how I became the designer I am today.
+                        </p>
+                    </div>
+                    <div class="lg:col-span-8">
+                        <div class="relative pl-8 border-l-2 border-primary/20 space-y-16">
+                            <div class="relative">
+                                <div class="timeline-blob bg-primary"></div>
+                                <div class="space-y-2">
+                                    <span class="text-xs font-bold text-primary uppercase tracking-widest">2023 —
+                                        Present</span>
+                                    <h4 class="text-2xl font-serif font-semibold">Freelance UI/UX Designer</h4>
+                                    <p class="text-deep-text/70 max-w-xl">Collaborating with early-stage startups to
+                                        define their visual identity and build user-centric MVPs. Focused on creating
+                                        scalable design systems.</p>
+                                </div>
+                            </div>
+                            <div class="relative">
+                                <div class="timeline-blob bg-sage"></div>
+                                <div class="space-y-2">
+                                    <span class="text-xs font-bold text-sage uppercase tracking-widest">2022 —
+                                        2023</span>
+                                    <h4 class="text-2xl font-serif font-semibold">Junior Design Internship</h4>
+                                    <p class="text-deep-text/70 max-w-xl">Worked alongside senior designers at a
+                                        creative agency. Assisted in user testing, wireframing, and hand-off processes
+                                        for various lifestyle brands.</p>
+                                </div>
+                            </div>
+                            <div class="relative">
+                                <div class="timeline-blob bg-primary/40"></div>
+                                <div class="space-y-2">
+                                    <span class="text-xs font-bold text-deep-text/40 uppercase tracking-widest">2018 —
+                                        2022</span>
+                                    <h4 class="text-2xl font-serif font-semibold">BFA in Digital Design</h4>
+                                    <p class="text-deep-text/70 max-w-xl">Graduated with honors. Developed a strong
+                                        foundation in visual storytelling, typography, and interactive media design.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer class="py-24" id="contact">
+                <div class="relative overflow-hidden rounded-[4rem] glass-card p-12 md:p-24 text-center">
+                    <div class="absolute -top-24 -left-24 size-64 bg-primary/20 rounded-full blur-3xl"></div>
+                    <div class="absolute -bottom-24 -right-24 size-64 bg-sage/20 rounded-full blur-3xl"></div>
+                    <div class="relative z-10 space-y-12">
+                        <div
+                            class="inline-flex glass-card size-20 rounded-3xl items-center justify-center text-primary shadow-xl">
+                            <span class="material-symbols-outlined text-4xl">rocket_launch</span>
+                        </div>
+                        <h2 class="text-6xl md:text-8xl text-deep-text leading-none">
+                            Let’s make magic <br /> <span class="italic text-primary">happen.</span>
+                        </h2>
+                        <p class="text-xl text-deep-text/60 max-w-lg mx-auto font-light">
+                            I’m currently seeking new opportunities to create meaningful experiences. Coffee is on me!
+                        </p>
+                        <div class="flex flex-col gap-6 items-center">
+                            <a class="text-3xl md:text-5xl font-serif text-deep-text hover:text-primary transition-colors decoration-primary/30 decoration-2 underline-offset-8 underline group"
+                                href="mailto:hello@chloedesign.com">
+                                hello@shairadesign.com
+                            </a>
+                            <div class="flex gap-8 mt-4">
+                                <a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors"
+                                    href="#">LinkedIn</a>
+                                <a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors"
+                                    href="#">Dribbble</a>
+                                <a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors"
+                                    href="#">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="mt-20 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] font-bold uppercase tracking-[0.2em] text-deep-text/30">
+                    <p>© 2026 Shaira Design — Designed with a touch of magic</p>
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-sm">location_on</span>
+                        <span>Based in Brooklyn, NY</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Shaira Design | Modern UI/UX Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&amp;family=Outfit:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#E8AAB8",
+                        "sage": "#B7C9B0",
+                        "sage-light": "#E8F0E6",
+                        "soft-pink": "#FFF0F3",
+                        "deep-text": "#2D2A32",
+                        "glass-white": "rgba(255, 255, 255, 0.4)",
+                    },
+                    fontFamily: {
+                        "serif": ["Cormorant Garamond", "serif"],
+                        "sans": ["Outfit", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "4xl": "2rem",
+                        "5xl": "3rem",
+                    },
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply font-sans bg-[#FDFCFB] text-deep-text antialiased;
+            }
+            h1, h2, h3 {
+                @apply font-serif leading-tight;
+            }
+        }
+        .glass-card {
+            @apply bg-glass-white backdrop-blur-xl border border-white/40 shadow-[0_8px_32px_0_rgba(232,170,184,0.15)];
+        }
+        .floating-element {
+            background: radial-gradient(circle at 30% 30%, var(--tw-gradient-from), var(--tw-gradient-to));
+        }
+        .staggered-grid > div:nth-child(even) {
+            @apply md:mt-24;
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at top right, #FFF0F3 0%, transparent 70%),
+                        radial-gradient(circle at bottom left, #E8F0E6 0%, transparent 70%);
+        }
+    </style>
+</head>
+
+<body class="relative overflow-x-hidden selection:bg-primary/30">
+    <div class="fixed inset-0 hero-gradient -z-20 pointer-events-none"></div>
+    <div class="fixed top-[-10%] right-[-10%] w-[50vw] h-[50vw] bg-soft-pink/40 blur-[120px] rounded-full -z-10"></div>
+    <div class="fixed bottom-[-10%] left-[-10%] w-[40vw] h-[40vw] bg-sage-light/50 blur-[120px] rounded-full -z-10">
+    </div>
+    <div class="flex flex-col items-center">
+        <div class="w-full max-w-7xl px-6 lg:px-12">
+            <header class="flex items-center justify-between py-10">
+                <div class="flex items-center gap-3 group cursor-pointer">
+                    <div class="relative">
+                        <div
+                            class="size-11 bg-primary/20 rounded-full absolute -top-1 -left-1 group-hover:scale-125 transition-transform duration-500">
+                        </div>
+                        <div class="size-11 glass-card rounded-full flex items-center justify-center relative z-10">
+                            <span class="material-symbols-outlined text-primary text-xl font-light">auto_awesome</span>
+                        </div>
+                    </div>
+                    <h2 class="text-2xl font-bold tracking-tight font-serif italic text-deep-text">Shaira UX</h2>
+                </div>
+                <nav class="hidden md:flex items-center gap-12 glass-card px-8 py-3 rounded-full">
+                    <a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors"
+                        href="#work">Projects</a>
+                    <a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors"
+                        href="about.html">About</a>
+                    <a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors"
+                        href="#contact">Contact</a>
+                </nav>
+                <button
+                    class="h-12 px-8 bg-deep-text text-white rounded-full text-sm font-semibold hover:bg-primary transition-all shadow-lg hover:shadow-primary/20">
+                    Let's Talk
+                </button>
+            </header>
+            <main class="py-12 md:py-24">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                    <div class="lg:col-span-7 flex flex-col gap-10">
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-3 glass-card w-fit px-4 py-1.5 rounded-full">
+                                <span class="size-2 rounded-full bg-primary animate-pulse"></span>
+                                <span class="text-[10px] font-bold uppercase tracking-widest text-primary">Available for
+                                    new adventures</span>
+                            </div>
+                            <h1 class="text-6xl md:text-8xl lg:text-9xl text-deep-text">
+                                Crafting <span class="italic font-normal">delightful</span> digital <span
+                                    class="text-sage">narratives.</span>
+                            </h1>
+                            <p class="text-lg md:text-xl text-deep-text/70 max-w-xl font-light leading-relaxed">
+                                Hello! I’m Shaira, a Junior UI/UX Designer blending modern aesthetics with
+                                human-centered empathy to help brands bloom in the digital wild.
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-6 items-center">
+                            <a class="group relative px-8 py-4 bg-primary text-white font-bold rounded-2xl shadow-xl shadow-primary/20 hover:-translate-y-1 transition-all overflow-hidden"
+                                href="#work">
+                                <span class="relative z-10">Explore My Work</span>
+                                <div
+                                    class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                </div>
+                            </a>
+                            <div class="flex -space-x-3">
+                                <div
+                                    class="size-10 rounded-full border-2 border-white bg-soft-pink flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-primary text-sm">palette</span>
+                                </div>
+                                <div
+                                    class="size-10 rounded-full border-2 border-white bg-sage-light flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-sage text-sm">fluid</span>
+                                </div>
+                                <div
+                                    class="size-10 rounded-full border-2 border-white bg-white flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-deep-text/40 text-sm">add</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative z-10 w-full max-w-[440px] mx-auto">
+                            <div class="relative p-3 glass-card rounded-[3rem] overflow-hidden shadow-2xl">
+                                <div class="aspect-[4/5] bg-center bg-cover rounded-[2.5rem] grayscale-[20%] hover:grayscale-0 transition-all duration-700"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBK2QL93dILHfg5vFWYSLPj_XPyspq02qnhPZF1yGrSF37CjvFNDozg2cfxdz1ucj5JInWj1wizDkq1smpQxLV9l6O1cYgkBOr5mVI2pJ6V4s6Hh2PtMdTKxmAQstxZLJ0AEwE8xoe179Ek-lkzPQxYKX3h8mhoV3-kIGADagUiBJpDnE0I6_ODmQlsEjPRa14-spvHlm51gxXhAhcPLMJzpgXwWq9qsY29CUvpWzASifubYZsYGlnAm6vSZNd_5q18-Pis1xvWDxUp");'>
+                                </div>
+                            </div>
+                            <div class="absolute -top-10 -right-10 glass-card p-5 rounded-3xl w-40 hidden md:block animate-bounce shadow-2xl"
+                                style="animation-duration: 4s;">
+                                <div
+                                    class="size-10 bg-sage rounded-xl flex items-center justify-center text-white mb-3">
+                                    <span class="material-symbols-outlined">auto_graph</span>
+                                </div>
+                                <p class="text-[10px] uppercase font-bold text-deep-text/40 tracking-wider">Engagement
+                                </p>
+                                <p class="text-xl font-serif font-bold text-deep-text">+142%</p>
+                            </div>
+                            <div
+                                class="absolute -bottom-6 -left-12 glass-card p-4 rounded-full flex items-center gap-3 hidden md:flex shadow-2xl">
+                                <div class="size-12 rounded-full overflow-hidden border-2 border-white">
+                                    <div class="w-full h-full bg-primary/30 flex items-center justify-center">
+                                        <span class="material-symbols-outlined text-primary">face</span>
+                                    </div>
+                                </div>
+                                <div class="pr-4">
+                                    <p class="text-[10px] font-bold text-primary uppercase">New Client</p>
+                                    <p class="text-xs font-semibold">User Experience First</p>
+                                </div>
+                            </div>
+                            <div
+                                class="absolute -z-10 top-1/4 -left-20 size-32 rounded-full floating-element from-primary/30 to-soft-pink opacity-60 blur-sm">
+                            </div>
+                            <div
+                                class="absolute -z-10 bottom-1/4 -right-16 size-40 rounded-full floating-element from-sage/30 to-sage-light opacity-60 blur-sm">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <section class="py-24" id="work">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
+                    <div class="max-w-xl">
+                        <span class="text-primary font-bold text-xs uppercase tracking-[0.3em] mb-4 block">Selected
+                            Projects</span>
+                        <h2 class="text-5xl md:text-7xl text-deep-text">Where logic meets <span
+                                class="italic text-primary">imagination.</span></h2>
+                    </div>
+                    <div class="flex gap-4">
+                        <button
+                            class="size-14 glass-card rounded-full flex items-center justify-center text-deep-text hover:bg-primary hover:text-white transition-all">
+                            <span class="material-symbols-outlined">grid_view</span>
+                        </button>
+                        <button
+                            class="size-14 glass-card rounded-full flex items-center justify-center text-deep-text hover:bg-sage hover:text-white transition-all">
+                            <span class="material-symbols-outlined">filter_list</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 staggered-grid">
+                    <div class="group cursor-pointer">
+                        <div
+                            class="relative overflow-hidden rounded-[3.5rem] glass-card p-4 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-primary/10">
+                            <div class="aspect-[16/11] rounded-[2.8rem] overflow-hidden">
+                                <div class="w-full h-full bg-center bg-cover transition-transform duration-1000 group-hover:scale-110"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCeIO7xs7nJ4Werm0dOLDWuqeODoiy6v4BQVmvvzj2hQcsnvwBXB0Cqgb-HEYTPLBJe1DhRYjR4FGPrggIGCpfqHszN7c9la2heStnlPZ4tsgD9Avw7jStxXfcLH2yet233BHC58Uld-pKH8ud1GLBuYjerZQuWnuNXFh3HK6t1KyTQq3k8-lPhwLzUEaC-fc-DEvV9xJIy0MhAR5Cc7cFKQLGkfjnAAdM79hR9bDji8kcTI4Ti8AsEWDtbCb2BX2oCdP-Qug58JsN8");'>
+                                </div>
+                            </div>
+                            <div
+                                class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <div
+                                    class="glass-card px-10 py-4 rounded-full font-bold text-deep-text scale-90 group-hover:scale-100 transition-transform shadow-2xl">
+                                    Case Study
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8 flex justify-between items-start px-4">
+                            <div class="space-y-2">
+                                <div class="flex gap-3">
+                                    <span class="text-[10px] font-bold text-primary tracking-widest uppercase">UX
+                                        Research</span>
+                                    <span
+                                        class="text-[10px] font-bold text-deep-text/30 tracking-widest uppercase">Sustainability</span>
+                                </div>
+                                <h3 class="text-4xl text-deep-text group-hover:text-primary transition-colors">EcoTrack
+                                    Mobile</h3>
+                            </div>
+                            <span
+                                class="material-symbols-outlined text-4xl font-extralight group-hover:translate-x-2 transition-transform text-primary/40">arrow_outward</span>
+                        </div>
+                    </div>
+                    <div class="group cursor-pointer">
+                        <div
+                            class="relative overflow-hidden rounded-[3.5rem] glass-card p-4 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-sage/10">
+                            <div class="aspect-[16/11] rounded-[2.8rem] overflow-hidden">
+                                <div class="w-full h-full bg-center bg-cover transition-transform duration-1000 group-hover:scale-110"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDiUCUREWq3DJE2WD0VWXwCOzKuK9MvKMp94Jw0Son9ot1eJxhRvBcAKKfVOhifpEsxG7jTlgW0fYIqqRW0uVCICLjrOlENoHkDiZ2jVerjhSvAEqHlATti4ELSgFAA5_0-tgY9vCGqeO3mxfurdEWJSSBlMmdmvPB0GVsBuBQ_a8vtM3Wka4zEXBoiny_RFQJF-25O6zSA6etwyT3Fc3yIb-aXxIn9J4GqKW-7BHU4xxj8_IWqTItw8woBk7PaChi5UrGotw-AXnmQ");'>
+                                </div>
+                            </div>
+                            <div
+                                class="absolute inset-0 bg-sage/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <div
+                                    class="glass-card px-10 py-4 rounded-full font-bold text-deep-text scale-90 group-hover:scale-100 transition-transform shadow-2xl">
+                                    Case Study
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8 flex justify-between items-start px-4">
+                            <div class="space-y-2">
+                                <div class="flex gap-3">
+                                    <span class="text-[10px] font-bold text-sage tracking-widest uppercase">Visual
+                                        Design</span>
+                                    <span
+                                        class="text-[10px] font-bold text-deep-text/30 tracking-widest uppercase">Fintech</span>
+                                </div>
+                                <h3 class="text-4xl text-deep-text group-hover:text-sage transition-colors">SwiftPay App
+                                </h3>
+                            </div>
+                            <span
+                                class="material-symbols-outlined text-4xl font-extralight group-hover:translate-x-2 transition-transform text-sage/40">arrow_outward</span>
+                        </div>
+                    </div>
+                    <div class="group cursor-pointer">
+                        <div
+                            class="relative overflow-hidden rounded-[3.5rem] glass-card p-4 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-primary/10">
+                            <div class="aspect-[16/11] rounded-[2.8rem] overflow-hidden">
+                                <div class="w-full h-full bg-center bg-cover transition-transform duration-1000 group-hover:scale-110"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBaz-Fpog42ei3o5xNt2wOduh8MxjloSdljBppOoUymW1OHdc7xTIuBToBjWAqDFy3McrueVkkvUvsBpv9b3qqxdximc1FgNIKEMRrqKAvBUyLwhmNSOiOQXtwsCT50WgCnMOQ0vWqQxJFuZax4XgXiwBR9-FqbMsg6GAgl0-OZCvBnrAgKQgjQO084TOGkOOJnuetDyvgAKVaEOVko2yAH5wlIXu72UzSfnKqYctWiwJUnpZPWZ_XhvZL2PQ_4nETl2FevpgRx7_0p");'>
+                                </div>
+                            </div>
+                            <div
+                                class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <div
+                                    class="glass-card px-10 py-4 rounded-full font-bold text-deep-text scale-90 group-hover:scale-100 transition-transform shadow-2xl">
+                                    Case Study
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8 flex justify-between items-start px-4">
+                            <div class="space-y-2">
+                                <div class="flex gap-3">
+                                    <span
+                                        class="text-[10px] font-bold text-primary tracking-widest uppercase">Branding</span>
+                                    <span
+                                        class="text-[10px] font-bold text-deep-text/30 tracking-widest uppercase">Lifestyle</span>
+                                </div>
+                                <h3 class="text-4xl text-deep-text group-hover:text-primary transition-colors">Lumina
+                                    Identity</h3>
+                            </div>
+                            <span
+                                class="material-symbols-outlined text-4xl font-extralight group-hover:translate-x-2 transition-transform text-primary/40">arrow_outward</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer class="py-24" id="contact">
+                <div class="relative overflow-hidden rounded-[4rem] glass-card p-12 md:p-24 text-center">
+                    <div class="absolute -top-24 -left-24 size-64 bg-primary/20 rounded-full blur-3xl"></div>
+                    <div class="absolute -bottom-24 -right-24 size-64 bg-sage/20 rounded-full blur-3xl"></div>
+                    <div class="relative z-10 space-y-12">
+                        <div
+                            class="inline-flex glass-card size-20 rounded-3xl items-center justify-center text-primary shadow-xl">
+                            <span class="material-symbols-outlined text-4xl">rocket_launch</span>
+                        </div>
+                        <h2 class="text-6xl md:text-8xl text-deep-text leading-none">
+                            Let’s make magic <br /> <span class="italic text-primary">happen.</span>
+                        </h2>
+                        <p class="text-xl text-deep-text/60 max-w-lg mx-auto font-light">
+                            I’m currently seeking new opportunities to create meaningful experiences. Coffee is on me!
+                        </p>
+                        <div class="flex flex-col gap-6 items-center">
+                            <a class="text-3xl md:text-5xl font-serif text-deep-text hover:text-primary transition-colors decoration-primary/30 decoration-2 underline-offset-8 underline group"
+                                href="mailto:hello@chloedesign.com">
+                                hello@shairadesign.com
+                            </a>
+                            <div class="flex gap-8 mt-4">
+                                <a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors"
+                                    href="#">LinkedIn</a>
+                                <a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors"
+                                    href="#">Dribbble</a>
+                                <a class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors"
+                                    href="#">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="mt-20 flex flex-col md:row justify-between items-center gap-6 text-[10px] font-bold uppercase tracking-[0.2em] text-deep-text/30">
+                    <p>© 2026 Shaira Design — Designed with a touch of magic</p>
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-sm">location_on</span>
+                        <span>Based in Brooklyn, NY</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+</body>
+
+</html>
